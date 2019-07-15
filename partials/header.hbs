@@ -33,26 +33,26 @@
                 </div>
                 </h1>
                 <div class="excerpt">
-                    {{# is "index" }}
+                    {{#is "index" }}
                     {{ @site.description }}
-                    {{/ is }}
-                    {{# is "page" }}
+                    {{/is }}
+                    {{#is "page" }}
                     {{ excerpt }}
-                    {{/ is }}
-                    {{# is "post" }}
+                    {{/is }}
+                    {{#is "post" }}
                     Posted on {{ date format="MMMM Do, YYYY" }} under {{# primary_tag }}<a
                         href="{{ url }}">{{ name }}</a>{{/ primary_tag }}
-                    {{/ is }}
-                    {{# is "tag" }}
+                    {{/is }}
+                    {{#is "tag" }}
                     {{ description }}
-                    {{/ is }}
-                    {{# is "author" }}
+                    {{/is }}
+                    {{#is "author" }}
                     {{ bio }}
-                    {{/ is }}
+                    {{/is }}
                 </div>
-                {{# is "author" }}
+                {{#is "author" }}
                 {{!-- {{> author-social }} --}}
-                {{/ is }}
+                {{/is }}
             </div>
         </div>
         <div class="nav">
