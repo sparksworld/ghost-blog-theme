@@ -21,7 +21,7 @@
 
                     <h1 class="title heading">
                         {{#is "index" }}
-                        {{ @blog.title }}
+                        {{ @site.title }}
                         {{/is }}
                         {{#is "page, post" }}
                         {{ title }}
@@ -34,7 +34,7 @@
                 </h1>
                 <div class="excerpt">
                     {{# is "index" }}
-                    {{ @blog.description }}
+                    {{ @site.description }}
                     {{/ is }}
                     {{# is "page" }}
                     {{ excerpt }}
