@@ -1,0 +1,62 @@
+<div id="header">
+    {{#if feature_image }}
+    <div class="background feature-image" style="background-image: url({{ feature_image }});"></div>
+    {{ else }}
+    {{#is 'index'}}
+        {{#if @site.cover_image}}
+        <div class="background cover-image" style="background-image: url({{ @site.cover_image }});"></div>
+        {{/if}}
+    {{else}}
+        <div class="background"></div>
+    {{/is}}
+
+    {{/if }}
+    <div class="container">
+        <div class="title-detail">
+            <div class="column small-12 header-content">
+                <div class="avatar-title-subscribe">
+                    <a href="{{ @site.url }}" class="header-logo">
+                        {{#if @site.logo}}<img src="{{@site.logo}}" alt="Blog Logo" />{{/if}}
+                    </a>
+
+                    <h1 class="title heading">
+                        {{#is "index" }}
+                        {{ @blog.title }}
+                        {{/is }}
+                        {{#is "page, post" }}
+                        {{ title }}
+                        {{/is }}
+                        {{#is "tag, author" }}
+                        {{ name }}
+                        {{/is }}
+                    </h1>
+                </div>
+                </h1>
+                <div class="excerpt">
+                    {{# is "index" }}
+                    {{ @blog.description }}
+                    {{/ is }}
+                    {{# is "page" }}
+                    {{ excerpt }}
+                    {{/ is }}
+                    {{# is "post" }}
+                    Posted on {{ date format="MMMM Do, YYYY" }} under {{# primary_tag }}<a
+                        href="{{ url }}">{{ name }}</a>{{/ primary_tag }}
+                    {{/ is }}
+                    {{# is "tag" }}
+                    {{ description }}
+                    {{/ is }}
+                    {{# is "author" }}
+                    {{ bio }}
+                    {{/ is }}
+                </div>
+                {{# is "author" }}
+                {{!-- {{> author-social }} --}}
+                {{/ is }}
+            </div>
+        </div>
+        <div class="nav">
+            {{navigation}}
+        </div>
+    </div>
+</div>

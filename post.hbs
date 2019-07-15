@@ -1,0 +1,75 @@
+{{!< default}}
+
+<link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css" />
+<link rel="stylesheet" type="text/css" href="{{ asset "css/prism.css" }}" />
+<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="{{asset "js/prism.js"}}"></script>
+
+{{#post }}
+{{> header}}
+<div id="content" class="container">
+    <div class="row post">
+        <div class="column small-12 large-10 xlarge-8 large-offset-1 xlarge-offset-2">
+            <div class="authors">
+                <div class="authors-detail">
+                    <h3>文章作者</h3>
+                    <div class="timeage">{{date timeago="true"}}</div>
+                </div>
+                <ul>
+                    {{#foreach authors }}
+                    <li>
+                        <a href="{{ url }}">
+                            <div class="author-avatar">
+                                {{# if profile_image }}
+                                <div style="background-image: url({{ profile_image }});"></div>
+                                {{ else }}
+                                <div style="background-image: url({{ asset "images/avatar.svg" }});"></div>
+                                {{/ if }}
+                            </div>
+                            <div class="metadata">
+                                <h4>{{ name }}</h4>
+                                <p>{{ bio }}
+                            </div>
+                        </a>
+                    </li>
+                    {{/foreach }}
+                </ul>
+            </div>
+            <hr>
+            {{content}}
+            {{> subscribe }}
+            {{#is "post" }}
+
+            <div class="prev-next">
+                <div class="row">
+                    {{#next_post}}
+                    <div class="column small-12 large-6">
+                        <h5>Previous post</h5>
+                        {{> post-card condensed="true" }}
+                    </div>
+                    {{/next_post}}
+                    {{#prev_post}}
+                    <div class="column small-12 large-6">
+                        <h5>Next post</h5>
+                        {{> post-card condensed="true" }}
+                    </div>
+                    {{/prev_post}}
+                </div>
+            </div>
+            <div id="gitalk-container"></div>
+
+            <script>
+                console.log('{{comment_id}}')
+                var gitalk = new Gitalk($.extend(gitalkConfig, {
+                    title: document.title,
+                    id: '{{comment_id}}' ? '{{comment_id}}' : location.pathname,      // Ensure uniqueness and length less than 50
+                    distractionFreeMode: false  // Facebook-like distraction free mode
+                }))
+
+                gitalk.render('gitalk-container')
+            </script>
+            {{/is }}
+        </div>
+    </div>
+</div>
+{{/post }}

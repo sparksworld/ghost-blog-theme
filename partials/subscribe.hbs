@@ -1,0 +1,10 @@
+{{#if @labs.subscribers }}
+<div class="column small-12" id="subscribe">
+    <div class="subscribe-hold">
+        <span>Want the newsletter?</span>
+        {{ subscribe_form placeholder="email" }}
+    </div>
+    <a href="https://feedly.com/i/subscription/feed/{{ url absolute="true" }}rss/" class="rss" target="_blank"
+        rel="noopener">or subscribe via RSS...</a>
+</div>
+{{/if }}

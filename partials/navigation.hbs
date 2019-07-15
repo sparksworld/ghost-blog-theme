@@ -1,0 +1,24 @@
+<div class="blog-nav">
+    {{!-- <a><a href="{{@site.url}}">首页</a></a> --}}
+    <ul>
+        {{#foreach navigation}}
+        <li class="nav-{{slug}} {{#if current}} nav-current{{/if}}">
+            <a href="{{this.url}}">{{label}}</a>
+        </li>
+        {{/foreach}}
+    </ul>
+</div>
+<script>
+    var blogNav = document.querySelector('.blog-nav')
+    var navs = document.querySelectorAll('.blog-nav ul li')
+    for (var i = 0; i < navs.length; i++) {
+        blogNav.style.display = "block"
+        navs[i].style.height = navs[i].offsetWidth + 'px'
+        navs[i].style.lineHeight = navs[i].offsetWidth + 'px'
+        navs[i].style.animation = 'suspension ' + (Math.random() + 1) + 's ease-in infinite alternate forwards'
+        // 圆上坐标x: x1   =   x0   +   r   *   cos(ao   *   3.14   /180   ) 
+        //圆上坐标y: y1   =   y0   +   r   *   sin(ao   *   3.14   /180   )
+        navs[i].style.top = (blogNav.offsetHeight / 2) * Math.cos((360 / navs.length * i) * Math.PI / 180) + navs[i].offsetHeight / 2 + 'px'
+        navs[i].style.right = (blogNav.offsetWidth / 2) * Math.sin((360 / navs.length * i) * Math.PI / 180) + navs[i].offsetWidth / 2 + 'px'
+    }
+</script>

@@ -1,0 +1,19 @@
+<div class="post-card {{ primary_tag.slug }}{{# if condensed }} condensed{{/ if }}">
+    <a href="{{ url }}">
+        <h2 class="heading title not-capped">{{ title }}</h2>
+        {{# unless condensed }}
+        <p class="excerpt">{{ excerpt characters="140" }}</p>
+        {{/ unless }}
+    </a>
+    <div class="metadata">
+        {{#if tags}}
+        <div>
+            <span style="color: #fff;">tags:</span>
+            {{#foreach tags}}
+                <a href="{{url}}" title="{{name}}" class="category tag tag-{{id}} {{slug}}">{{name}}</a>
+            {{/foreach}}
+        </div>
+        {{/if}}
+        <span class="date">{{ date timeago="true" }}</span>
+    </div>
+</div>

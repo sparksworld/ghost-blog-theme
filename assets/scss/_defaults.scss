@@ -1,0 +1,49 @@
+html {
+    position: relative;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+*,
+*:focus {
+    outline: none;
+}
+
+
+body {
+    background: $off-white;
+    color: $off-black;
+    font-family: $body-font;
+    font-weight: $normal-weight;
+    font-size: 16px;
+    line-height: 1.5;
+    direction: ltr;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    display: flex;
+    -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+    height: 100%;
+    
+}
+
+#app {
+    flex: 1;
+}
+
+// MathJAX support (make sure that block elements align left)
+.kg-card-markdown {
+    .MathJax_Display {
+        text-align: left !important;
+    }
+}
