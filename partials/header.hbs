@@ -1,10 +1,16 @@
 <div id="header">
     {{#if feature_image }}
-    <div class="background feature-image" style="background-image: url({{ feature_image }});"></div>
+    <div class="background">
+        <img class="feature_image" src="{{feature_image}}" alt="{{@site.description}}">
+        <img src="{{feature_image}}" alt="{{@site.description}}">
+    </div>
     {{ else }}
     {{#is 'index'}}
     {{#if @site.cover_image}}
-    <div class="background cover-image" style="background-image: url({{ @site.cover_image }});"></div>
+    <div class="background">
+        <img class="cover_image" src="{{@site.cover_image}}" alt="{{@site.description}}">
+        <img src="{{@site.cover_image}}" alt="{{@site.description}}">
+    </div>
     {{else}}
     <div class="background"></div>
     {{/if}}

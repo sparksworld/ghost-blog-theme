@@ -65,18 +65,37 @@ $header-author-some-size: 24px;
         width: 100%;
         height: 100%;
         z-index: -1;
-        background: linear-gradient(to bottom right, rgba(235, 74, 187, 1), rgba(214, 104, 70, 0.5), rgba(112, 219, 196, 0.8));
-        // background-repeat: no-repeat;
-        // background-size: cover;
-        // background-position: 50% 50%;
+        background: linear-gradient(to bottom right, rgb(86, 10, 148), rgba(214, 104, 70, 0.5), rgba(112, 219, 196, 0.8));
+        overflow: hidden;
 
-        &.feature-image:after {
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: 50% 50%;
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        .cover_image,
+        .feature_image {
+            filter: blur(10px);
+            height: 100%;
+            width: auto;
+        }
+
+        &:after,
+        &:after {
             position: absolute;
             top: 0px;
             left: 0px;
             width: 100%;
             height: 100%;
-            background: rgba($black, 0.5);
+            background: rgba($black, 0.2);
             content: "";
         }
     }
@@ -162,6 +181,7 @@ $header-author-some-size: 24px;
                     50% {
                         transform: translateX(-4px);
                     }
+
                     100% {
                         transform: translateX(4px);
                     }

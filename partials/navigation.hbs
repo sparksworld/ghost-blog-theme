@@ -9,13 +9,19 @@
     </ul>
 </div>
 <script>
-    var blogNav = document.querySelector('.blog-nav')
-    var navs = document.querySelectorAll('.blog-nav ul li')
+    var animation;
+    var blogNav = document.querySelector('.blog-nav');
+    var navs = document.querySelectorAll('.blog-nav ul li');
+    ["", "ms", "webkit"].forEach(function (prefix) {
+        animation = prefix + (prefix ? "A" : "a") + "nimation";
+    });
+
     for (var i = 0; i < navs.length; i++) {
-        blogNav.style.display = "block"
-        navs[i].style.height = navs[i].offsetWidth + 'px'
-        navs[i].style.lineHeight = navs[i].offsetWidth + 'px'
-        navs[i].style.animation = 'suspension ' + (Math.random() + 1) + 's ease-in infinite alternate forwards'
+        blogNav.style.display = "block";
+        navs[i].style.height = navs[i].offsetWidth + 'px';
+        navs[i].style.lineHeight = navs[i].offsetWidth + 'px';
+
+        navs[i].style[animation] = 'suspension ' + (Math.random() + 1) + 's ease-in infinite alternate forwards'
         // 圆上坐标x: x1   =   x0   +   r   *   cos(ao   *   3.14   /180   ) 
         //圆上坐标y: y1   =   y0   +   r   *   sin(ao   *   3.14   /180   )
         navs[i].style.top = (blogNav.offsetHeight / 2) * Math.cos((360 / navs.length * i) * Math.PI / 180) + navs[i].offsetHeight / 2 + 'px'
