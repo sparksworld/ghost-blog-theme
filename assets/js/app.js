@@ -5,7 +5,7 @@ $(function($) {
     function registerTilts() {
         $('.card').tilt({
             maxTilt: 8,
-            glare: true,
+            glare: false,
             maxGlare: 0.75
         });
     }
