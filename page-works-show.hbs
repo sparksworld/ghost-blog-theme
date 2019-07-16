@@ -1,0 +1,27 @@
+{{!< default}}
+
+{{> header post}}
+
+<div id="content" class="container">
+    {{#post}}
+    {{#if tags}}
+    <ul class="clear page-works-show">
+        {{#foreach tags}}
+        <li class="centent-box card">
+            <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">
+                {{#if feature_image}}
+                <img src="{{feature_image}}" alt="{{name}}">
+                {{else}}
+                <img src="{{@site.logo}}" alt="{{name}}">
+                {{/if}}
+                <div class="tags-description">
+                    <h3>{{name}}</h3>
+                    <p>{{description}}</p>
+                </div>
+            </a>
+        </li>
+        {{/foreach}}
+    </ul>
+    {{/if}}
+    {{/post}}
+</div>

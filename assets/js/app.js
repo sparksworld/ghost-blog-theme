@@ -3,10 +3,10 @@
 // Code snippet inspired by https://github.com/douglasrodrigues5/ghost-blog-infinite-scroll
 $(function($) {
     function registerTilts() {
-        $('.post-card').tilt({
-            maxTilt: 3,
+        $('.card').tilt({
+            maxTilt: 8,
             glare: true,
-            maxGlare: 0.15
+            maxGlare: 0.75
         });
     }
 

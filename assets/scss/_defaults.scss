@@ -10,6 +10,8 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 *,
@@ -35,6 +37,11 @@ body {
     flex-direction: column;
     height: 100%;
     
+}
+ul, dl, li, dd {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 #app {

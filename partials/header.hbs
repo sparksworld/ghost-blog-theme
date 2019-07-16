@@ -3,11 +3,13 @@
     <div class="background feature-image" style="background-image: url({{ feature_image }});"></div>
     {{ else }}
     {{#is 'index'}}
-        {{#if @site.cover_image}}
-        <div class="background cover-image" style="background-image: url({{ @site.cover_image }});"></div>
-        {{/if}}
+    {{#if @site.cover_image}}
+    <div class="background cover-image" style="background-image: url({{ @site.cover_image }});"></div>
     {{else}}
-        <div class="background"></div>
+    <div class="background"></div>
+    {{/if}}
+    {{else}}
+    <div class="background"></div>
     {{/is}}
 
     {{/if }}
