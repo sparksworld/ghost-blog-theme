@@ -9,12 +9,10 @@
     </ul>
 </div>
 <script>
-    var animation;
+    var animation = getAnimation();
     var blogNav = document.querySelector('.blog-nav');
     var navs = document.querySelectorAll('.blog-nav ul li');
-    ["", "ms", "webkit"].forEach(function (prefix) {
-        animation = prefix + (prefix ? "A" : "a") + "nimation";
-    });
+
 
     for (var i = 0; i < navs.length; i++) {
         blogNav.style.display = "block";
@@ -26,5 +24,15 @@
         //圆上坐标y: y1   =   y0   +   r   *   sin(ao   *   3.14   /180   )
         navs[i].style.top = (blogNav.offsetHeight / 2) * Math.cos((360 / navs.length * i) * Math.PI / 180) + navs[i].offsetHeight / 2 + 'px'
         navs[i].style.right = (blogNav.offsetWidth / 2) * Math.sin((360 / navs.length * i) * Math.PI / 180) + navs[i].offsetWidth / 2 + 'px'
+    }
+
+    function getAnimation() {
+        var pre = ["", "ms", "webkit"]
+        for (var i = 0; i < pre.length; i++) {
+            if (pre[i] in document.body.style) {
+                return pre[i] + (pre[i] ? "A" : "a") + "nimation";
+            }
+            return pre[i] + (pre[i] ? "A" : "a") + "nimation";
+        }
     }
 </script>

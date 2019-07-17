@@ -267,14 +267,6 @@ $header-author-some-size: 24px;
                 line-height: 2.2rem;
             }
 
-            @include desktop-up {
-                max-width: 60%;
-            }
-
-            @include widescreen-up {
-                max-width: 50%;
-            }
-
             a {
                 font-weight: $bold-weight;
                 color: $white;

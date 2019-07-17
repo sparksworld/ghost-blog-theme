@@ -106,11 +106,11 @@
         hr {
             border: none;
             border-top: 1px solid $light-gray;
-            // margin: $medium-space auto;
+            margin: $small-space auto;
 
             @include desktop-up {
-                width: 50%;
-                // margin: $xlarge-space auto;
+                width: 60%;
+                margin: $medium-space auto;
             }
         }
 
@@ -134,11 +134,13 @@
     }
 
     .authors {
+        padding-bottom: $medium-space;
+        // box-shadow: 2px 2px 50px 10px rgba(0,0,0,.2);
         .authors-detail {
             display: flex;
             justify-content: space-between;
             margin-bottom: $medium-space;
-            border-bottom: 5px solid #ccc;
+            border-bottom: 1px solid #ccc;
             .timeage {
                 color: #999;
                 white-space: nowrap;
@@ -232,9 +234,5 @@
             font-size: 1rem;
             margin-left: $small-space;
         }
-    }
-
-    .comments {
-        margin: $large-space 0px;
     }
 }

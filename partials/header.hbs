@@ -5,6 +5,7 @@
         <img src="{{feature_image}}" alt="{{@site.description}}">
     </div>
     {{ else }}
+    {{#is "index, author"}}
     {{#is 'index'}}
     {{#if @site.cover_image}}
     <div class="background">
@@ -14,18 +15,40 @@
     {{else}}
     <div class="background"></div>
     {{/if}}
+    {{/is}}
+
+    {{#is 'author'}}
+    {{#if cover_image}}
+    <div class="background">
+        <img class="cover_image" src="{{cover_image}}" alt="{{description}}">
+        <img src="{{cover_image}}" alt="{{description}}">
+    </div>
+    {{else}}
+    <div class="background"></div>
+    {{/if}}
+    {{/is}}
     {{else}}
     <div class="background"></div>
     {{/is}}
-
     {{/if }}
     <div class="container">
         <div class="title-detail">
             <div class="column small-12 header-content">
                 <div class="avatar-title-subscribe">
-                    <a href="{{ @site.url }}" class="header-logo">
-                        {{#if @site.logo}}<img src="{{@site.logo}}" alt="Blog Logo" />{{/if}}
+                    {{#is "author"}}
+                    <a href="javascript:;" class="header-logo">
+                        <img src="{{profile_image}}" alt="{{name}}" />
                     </a>
+                    {{else}}
+                    <a href="{{ @site.url }}" class="header-logo">
+                        {{#if @site.logo}}
+                            <img src="{{@site.logo}}" alt="{{@site.title}}" />
+                        {{else}}
+                            <img src="{{asset 'images/avatar.svg'}}" alt="{{@site.title}}">
+                        {{/if}}
+                    </a>
+                    {{/is}}
+
 
                     <h1 class="title heading">
                         {{#is "index" }}
