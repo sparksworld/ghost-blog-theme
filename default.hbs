@@ -9,10 +9,7 @@
     <title>{{ meta_title }}</title>
 
     <link rel="stylesheet" type="text/css" href="{{ asset "built/app.css" }}" />
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     {{ ghost_head }}
 </head>
@@ -25,11 +22,7 @@
     {{> footer}}
     {{#if pagination.pages }}
     <script>
-        // maxPages is a global variable that is needed to determine
-        // if we need to load more pages for the infinitescroll, or if
-        // we reached the last page already.
         var maxPages = parseInt('{{ pagination.pages }}');
-        console.log(maxPages)
     </script>
     {{/if }}
 
