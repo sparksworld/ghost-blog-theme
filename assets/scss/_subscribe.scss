@@ -3,11 +3,11 @@ $subscribe-border: 6px;
 #subscribe {
     position: relative;
     text-align: center;
-    margin: $large-space + $small-space 0px $medium-space + $small-space 0px;
+    margin: $large-space + $small-space 0px;
 
-    @include tablet-up {
-        margin: $large-space + $small-space 0px $medium-space 0px;
-    }
+    // @include tablet-up {
+    //     margin: $large-space + $small-space 0px $medium-space;
+    // }
 
     &:before,
     &:after {

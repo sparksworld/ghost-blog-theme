@@ -5,23 +5,25 @@
 <div id="content" class="container">
     {{#post}}
     {{#if tags}}
-    <ul class="clear page-works-show">
+    <div class="row page-works-show">
         {{#foreach tags}}
-        <li class="centent-box card">
-            <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">
-                {{#if feature_image}}
-                <img src="{{feature_image}}" alt="{{name}}">
-                {{else}}
-                <img src="{{@site.logo}}" alt="{{name}}">
-                {{/if}}
-                <div class="tags-description">
-                    <h3>{{name}}</h3>
-                    <p>{{description}}</p>
-                </div>
-            </a>
-        </li>
+        <div class="column small-12 medium-6 xlarge-4">
+            <div class="post-card centent-box card">
+                <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">
+                    {{#if feature_image}}
+                    <img src="{{feature_image}}" alt="{{name}}">
+                    {{else}}
+                    <img src="{{@site.logo}}" alt="{{name}}">
+                    {{/if}}
+                    <div class="tags-description">
+                        <h3>{{name}}</h3>
+                        <p>{{description}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
         {{/foreach}}
-    </ul>
+    </div>
     {{/if}}
     {{/post}}
 </div>

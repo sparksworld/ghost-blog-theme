@@ -68,7 +68,6 @@ $header-author-some-size: 24px;
         z-index: -1;
         background: linear-gradient(to bottom right, rgb(86, 10, 148), rgba(214, 104, 70, 0.5), rgba(112, 219, 196, 0.8));
         overflow: hidden;
-
         background-repeat: no-repeat;
         background-size: auto 100%;
         background-position: 50% 50%;
@@ -163,6 +162,7 @@ $header-author-some-size: 24px;
                 // margin-bottom: $medium-space;
                 // margin-right: 10px;
                 border-radius: 50%;
+                box-shadow: 4px 4px 20px 10px rgba($black, 0.25);
                 overflow: hidden;
 
                 @include tablet-up {

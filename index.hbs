@@ -4,14 +4,33 @@
 {{> subscribe }}
 
 <div id="posts" class="container">
-    <div class="row">
-        {{#foreach posts}}
-        <div class="column small-12 medium-6 xlarge-4">
-            {{> post-card }}
+    <div class="spark-posts">
+        <h2 class="spark-title">全部博文</h2>
+        <div class="row">
+            {{#foreach posts}}
+            <div class="column small-12 medium-6 xlarge-4">
+                {{> post-card }}
+            </div>
+            {{/foreach }}
         </div>
-        {{/foreach }}
+        <div class="row">
+            {{ pagination }}
+        </div>
     </div>
-    <div class="row">
-        {{ pagination }}
+    <div class="spark-posts">
+        <h2 class="spark-title">精选博文</h2>
+        <div class="row">
+            {{#get "posts" filter="featured:true" include="authors,tags" limit="3" as |featured|}}
+            {{#if featured}}
+            {{#foreach featured}}
+            <div class="column small-12 medium-6 xlarge-4">
+                {{> post-card }}
+            </div>
+            {{/foreach}}
+            {{/if}}
+            {{/get}}
+            {{!-- The tag below iterates over all the posts --}}
+        </div>
     </div>
+
 </div>
