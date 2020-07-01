@@ -87,3 +87,12 @@
         box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.15);
     }
 </style>
+<script>
+    [].slice.call(document.querySelectorAll('table')).forEach(function (el) {
+        var wrapper = document.createElement('div');
+        wrapper.className = 'responsive-table';
+        el.parentNode.insertBefore(wrapper, el);
+        el.parentNode.removeChild(el);
+        wrapper.appendChild(el);
+    })
+</script>

@@ -21,8 +21,8 @@
         h4,
         h5,
         h6 {
-            padding-top: $small-space;
             @extend .not-capped;
+            padding-top: $small-space;
         }
 
         img {
@@ -83,6 +83,7 @@
 
                 td,
                 th {
+                    border: 1px solid #dedede; /*内部边框样式*/
                     padding: $small-space $medium-space;
                 }
 
