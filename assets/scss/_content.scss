@@ -83,9 +83,12 @@
 
                 td,
                 th {
-                    border: 1px solid #dedede; /*内部边框样式*/
+                    border: 1px solid #dedede;
+                    /*内部边框样式*/
                     padding: $small-space $medium-space;
                 }
+
+
 
                 thead {
                     background: $dark-gray;
@@ -93,8 +96,8 @@
                 }
 
                 tbody {
-                    tr:nth-child(even) {
-                        background: $white;
+                    tr:nth-child(2n) {
+                        background: rgba(158, 188, 226, 0.12);
                     }
                 }
             }
@@ -137,12 +140,14 @@
 
     .authors {
         padding-bottom: $medium-space;
+
         // box-shadow: 2px 2px 50px 10px rgba(0,0,0,.2);
         .authors-detail {
             display: flex;
             justify-content: space-between;
             margin-bottom: $medium-space;
             border-bottom: 1px solid #ccc;
+
             .timeage {
                 color: #999;
                 white-space: nowrap;
