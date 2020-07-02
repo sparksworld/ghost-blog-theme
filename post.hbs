@@ -22,9 +22,11 @@
                         <a href="{{ url }}">
                             <div class="author-avatar">
                                 {{# if profile_image }}
-                                <div style="background-image: url({{ profile_image }});"></div>
+                                {{!-- <div style="background-image: url({{ profile_image }});"></div> --}}
+                                <img src="{{ profile_image }}" alt="">
                                 {{ else }}
-                                <div style="background-image: url({{ asset "images/avatar.svg" }});"></div>
+                                {{!-- <div style="background-image: url({{ asset "images/avatar.svg" }});"></div> --}}
+                                <img src="{{ asset "images/avatar.svg" }}" alt="">
                                 {{/ if }}
                             </div>
                             <div class="metadata">

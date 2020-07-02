@@ -164,14 +164,20 @@ $header-author-some-size: 24px;
                 border-radius: 50%;
                 box-shadow: 4px 4px 20px 10px rgba($black, 0.25);
                 overflow: hidden;
+                position: relative;
+                background: #ddd;
 
                 @include tablet-up {
                     margin-bottom: 0px;
                 }
 
                 img {
-                    height: 100%;
+                    position: absolute;
                     width: 100%;
+                    height: auto;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
                 }
 
                 &:hover {
