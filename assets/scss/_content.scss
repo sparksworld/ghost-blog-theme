@@ -15,126 +15,128 @@
             margin-top: $large-space;
         }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            @extend .not-capped;
-            padding-top: $small-space;
-        }
-
-        img {
-            max-width: 100%;
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: $medium-space auto;
-
-            @include desktop-up {
-                margin: $large-space auto;
+        .post-wrapper {
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                @extend .not-capped;
+                padding-top: $small-space;
             }
 
-            &~figcaption,
-            &~small {
-                margin-top: 0px;
-                margin-bottom: $medium-space;
+            img {
+                max-width: 100%;
+                width: 100%;
+                height: auto;
                 display: block;
-                text-align: center;
+                margin: $medium-space auto;
 
                 @include desktop-up {
-                    margin-top: -$medium-space;
-                    margin-bottom: $large-space;
-                }
-            }
-        }
-
-        .kg-image-card,
-        .kg-embed-card {
-            margin: $medium-space 0px;
-
-            @include desktop-up {
-                margin: $large-space 0px;
-
-                &.kg-width-wide img {
-                    max-width: 80%;
+                    margin: $large-space auto;
                 }
 
-                &.kg-width-full img {
-                    max-width: 100%;
+                &~figcaption,
+                &~small {
+                    margin-top: 0px;
+                    margin-bottom: $medium-space;
+                    display: block;
+                    text-align: center;
+
+                    @include desktop-up {
+                        margin-top: -$medium-space;
+                        margin-bottom: $large-space;
+                    }
                 }
             }
-        }
 
-        table {
-            border-collapse: collapse;
-            border: 1px solid $light-gray;
-            margin: $medium-space auto;
+            .kg-image-card,
+            .kg-embed-card {
+                margin: $medium-space 0px;
 
-            @include desktop-up {
-                margin: $large-space auto;
-                border: none;
-                box-shadow: 0px $small-space $medium-space rgba($black, 0.1);
-            }
+                @include desktop-up {
+                    margin: $large-space 0px;
 
-            td,
-            th {
-                border: 1px solid #dedede;
-                /*内部边框样式*/
-                padding: $small-space $medium-space;
-            }
+                    &.kg-width-wide img {
+                        max-width: 80%;
+                    }
 
-
-
-            thead {
-                background: $dark-gray;
-                color: $white;
-            }
-
-            tbody {
-                tr:nth-child(2n) {
-                    background: rgba(158, 188, 226, 0.12);
+                    &.kg-width-full img {
+                        max-width: 100%;
+                    }
                 }
             }
-        }
 
-        .responsive-table {
-            overflow-x: auto;
-
-            &~small {
-                display: block;
-                text-align: center;
-            }
-        }
-
-        hr {
-            border: none;
-            border-top: 1px solid $light-gray;
-            margin: $small-space auto;
-
-            @include desktop-up {
-                width: 60%;
+            table {
+                border-collapse: collapse;
+                border: 1px solid $light-gray;
                 margin: $medium-space auto;
+
+                @include desktop-up {
+                    margin: $large-space auto;
+                    border: none;
+                    box-shadow: 0px $small-space $medium-space rgba($black, 0.1);
+                }
+
+                td,
+                th {
+                    border: 1px solid #dedede;
+                    /*内部边框样式*/
+                    padding: $small-space $medium-space;
+                }
+
+
+
+                thead {
+                    background: $dark-gray;
+                    color: $white;
+                }
+
+                tbody {
+                    tr:nth-child(2n) {
+                        background: rgba(158, 188, 226, 0.12);
+                    }
+                }
             }
-        }
 
-        blockquote {
-            border-left: 4px solid $light-gray;
-            margin: $medium-space;
-            padding-left: $medium-space;
-        }
+            .responsive-table {
+                overflow-x: auto;
 
-        mark {
-            padding: $small-space / 2 $small-space;
-            background: $primary-color;
-            color: $white;
-            border-radius: $border-radius;
-        }
+                &~small {
+                    display: block;
+                    text-align: center;
+                }
+            }
 
-        pre {
-            border-radius: $border-radius;
-            font-size: 1rem;
+            hr {
+                border: none;
+                border-top: 1px solid $light-gray;
+                margin: $small-space auto;
+
+                @include desktop-up {
+                    width: 60%;
+                    margin: $medium-space auto;
+                }
+            }
+
+            blockquote {
+                border-left: 4px solid $light-gray;
+                margin: $medium-space;
+                padding-left: $medium-space;
+            }
+
+            mark {
+                padding: $small-space / 2 $small-space;
+                background: $primary-color;
+                color: $white;
+                border-radius: $border-radius;
+            }
+
+            pre {
+                border-radius: $border-radius;
+                font-size: 1rem;
+            }
         }
     }
 
