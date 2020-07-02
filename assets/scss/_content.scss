@@ -144,13 +144,12 @@
     }
 
     .authors {
-        padding-bottom: $medium-space;
-
         // box-shadow: 2px 2px 50px 10px rgba(0,0,0,.2);
         .authors-detail {
             display: flex;
             justify-content: space-between;
             margin-bottom: $medium-space;
+            padding-bottom: 12px;
             border-bottom: 1px solid #ccc;
 
             .timeage {
