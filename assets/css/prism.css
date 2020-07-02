@@ -1,5 +1,5 @@
 /* PrismJS 1.20.0
-https://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+javascript+bash+css-extras+docker+git+go+json+json5+jsonp+js-templates+less+markup-templating+php+sass+scss+vim&plugins=line-highlight+line-numbers+show-invisibles+autolinker+jsonp-highlight+highlight-keywords+inline-color+command-line+normalize-whitespace+data-uri-highlight+toolbar+treeview */
+https://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+javascript+bash+css-extras+docker+git+go+json+json5+jsonp+js-templates+less+markup-templating+php+sass+scss+vim&plugins=line-highlight+line-numbers+autolinker+jsonp-highlight+highlight-keywords+inline-color+command-line+normalize-whitespace+data-uri-highlight+toolbar+treeview */
 /**
  * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
  * Based on https://github.com/tshedor/workshop-wp-theme (Example: http://workshop.kansan.com/category/sessions/basics or http://workshop.timshedor.com/category/sessions/basics);
@@ -319,41 +319,6 @@ pre[class*="language-"].line-numbers > code {
 			padding-right: 0.8em;
 			text-align: right;
 		}
-
-.token.tab:not(:empty),
-.token.cr,
-.token.lf,
-.token.space {
-	position: relative;
-}
-
-.token.tab:not(:empty):before,
-.token.cr:before,
-.token.lf:before,
-.token.space:before {
-	color: #808080;
-	opacity: 0.6;
-	position: absolute;
-}
-
-.token.tab:not(:empty):before {
-	content: '\21E5';
-}
-
-.token.cr:before {
-	content: '\240D';
-}
-
-.token.crlf:before {
-	content: '\240D\240A';
-}
-.token.lf:before {
-	content: '\240A';
-}
-
-.token.space:before {
-	content: '\00B7';
-}
 
 .token a {
 	color: inherit;

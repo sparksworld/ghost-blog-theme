@@ -15,11 +15,8 @@
             margin-top: $large-space;
         }
 
-        pre code[class=""] {
-            display: block;
+        pre[class=""] {
             overflow-x: auto;
-            word-wrap: break-word; 
-            white-space: pre-wrap;
             background: #f5f5f5;
         }
 
