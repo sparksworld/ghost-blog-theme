@@ -15,11 +15,6 @@
             margin-top: $large-space;
         }
 
-        pre[class=""] {
-            overflow-x: auto;
-            background: #f5f5f5;
-        }
-
         h1,
         h2,
         h3,
@@ -138,6 +133,8 @@
         }
 
         pre {
+            overflow-x: auto;
+            background: #f5f5f5;
             border-radius: $border-radius;
             font-size: 1rem;
         }
