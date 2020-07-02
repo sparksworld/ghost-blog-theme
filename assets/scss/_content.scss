@@ -15,7 +15,19 @@
             margin-top: $large-space;
         }
 
+        hr {
+            border: none;
+            border-top: 1px solid $light-gray;
+            margin: $small-space auto;
+
+            @include desktop-up {
+                width: 60%;
+                margin: $medium-space auto;
+            }
+        }
+
         .post-wrapper {
+
             h1,
             h2,
             h3,
@@ -109,16 +121,7 @@
                 }
             }
 
-            hr {
-                border: none;
-                border-top: 1px solid $light-gray;
-                margin: $small-space auto;
 
-                @include desktop-up {
-                    width: 60%;
-                    margin: $medium-space auto;
-                }
-            }
 
             blockquote {
                 border-left: 4px solid $light-gray;
