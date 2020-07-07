@@ -45,22 +45,27 @@
                 display: block;
                 margin: $medium-space auto;
 
+                @for $i from 5 through 10 {
+                    &[src*="##{$i}0%"] {
+                        width: #{$i}0%;
+                    }
+                }
                 @include desktop-up {
                     margin: $large-space auto;
                 }
 
-                &~figcaption,
-                &~small {
-                    margin-top: 0px;
-                    margin-bottom: $medium-space;
-                    display: block;
-                    text-align: center;
+                // &~figcaption,
+                // &~small {
+                //     margin-top: 0px;
+                //     margin-bottom: $medium-space;
+                //     display: block;
+                //     text-align: center;
 
-                    @include desktop-up {
-                        margin-top: -$medium-space;
-                        margin-bottom: $large-space;
-                    }
-                }
+                //     @include desktop-up {
+                //         margin-top: -$medium-space;
+                //         margin-bottom: $large-space;
+                //     }
+                // }
             }
 
             .kg-image-card,
@@ -144,6 +149,7 @@
     }
 
     .authors {
+
         // box-shadow: 2px 2px 50px 10px rgba(0,0,0,.2);
         .authors-detail {
             display: flex;
