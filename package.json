@@ -34,7 +34,7 @@
         "url": "https://github.com/sparksworld/ghost-blog-theme"
     },
     "devDependencies": {
-        "gulp": "3.9.1",
+        "gulp": "4.0.2",
         "gulp-autoprefixer": "^5.0.0",
         "gulp-livereload": "3.8.1",
         "gulp-sass": "^4.0.1",
